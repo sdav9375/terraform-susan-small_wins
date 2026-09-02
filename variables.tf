@@ -3,3 +3,8 @@ variable "color" {
   type        = bool
   default     = true
 }
+
+variable "count" {
+  description = "The number of bufos"
+  type = number
+}
