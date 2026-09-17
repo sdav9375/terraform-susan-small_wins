@@ -6,8 +6,9 @@ terraform {
       source = "austinvalle/bufo"
     }
 
-    httpaction = {
-      source = "terraform.local/local/httpaction"
+    https-pipedream = {
+      source  = "sdav9375/terraform-provider-https-pipedream"
+      version = "~> 1.0"
     }
   }
 }
@@ -29,7 +30,7 @@ action "bufo_print" "hello" {
   }
 }
 
-action "httpaction_request" "smoke_test" {
+action "pipedream_request" "smoke_test" {
   config {
     url    = "https://eobzplaeaw1eev8.m.pipedream.net"
     method = "POST"
